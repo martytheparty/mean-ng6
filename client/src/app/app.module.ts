@@ -9,7 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const appRoutes: Routes = [
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
   { path: '**', component: HomeComponent }
 ];
 
