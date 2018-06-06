@@ -1,0 +1,7 @@
+.has-success input {
+  border: 1px solid green;
+}
+
+.has-error input {
+  border: 1px solid red;
+}

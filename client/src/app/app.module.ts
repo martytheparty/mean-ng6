@@ -7,9 +7,13 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RegisterComponent } from './components/register/register.component';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '**', component: HomeComponent }
 ];
 
@@ -18,16 +22,18 @@ const appRoutes: Routes = [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(
           appRoutes,
           { enableTracing: true } // <-- debugging purposes only
         )
   ],
-  providers: [],
+  providers: [FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
